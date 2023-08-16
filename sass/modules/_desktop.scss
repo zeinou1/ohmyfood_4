@@ -1,0 +1,124 @@
+/*** 
+Media queries
+***/
+
+@media (max-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    padding: 0.125rem 3rem;
+    flex-direction: column;
+    gap: 1.5625rem;
+    &__restaurant {
+      flex-direction: row;
+    }
+  }
+
+  .reservation {
+    &__tittle {
+      font: 700 2.5rem $body_font;
+      width: 100%;
+    }
+    &__content {
+      font: 300 1.125rem $body_font;
+      width: 100%;
+    }
+  }
+
+  .plats {
+    display: flex;
+    padding: 0rem 3rem;
+    flex-direction: column;
+    gap: 1.75rem;
+    &__menus {
+      display: flex;
+      gap: 3.25rem;
+      flex-direction: row;
+    }
+    &__card {
+      width: 100%;
+      height: 15.6875rem;
+    }
+    padding-bottom: 2rem;
+  }
+
+  .footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  .footer__content {
+    flex-direction: row;
+    color: var(--white, #fff);
+    margin-top: 2.7rem;
+  }
+  .footer__title {
+    margin-top: -2.2rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .reservation {
+    &__button {
+      margin-top: 1rem;
+    }
+    &__tittle {
+      font: 700 2.5rem $body_font;
+      width: 100%;
+    }
+    &__content {
+      font: 300 1.125rem $body_font;
+      width: 100%;
+      margin-top: -1.3rem;
+      color: map-get($colors, "loc_title");
+    }
+  }
+
+  .fonctionnement {
+    display: flex;
+    padding: 3.125rem 11.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5625rem;
+    align-self: stretch;
+    &__restaurant {
+      flex-direction: row;
+    }
+    &__title {
+      margin-left: 0.1rem;
+    }
+  }
+
+  .plats {
+    display: flex;
+    padding: 0rem 11.25rem;
+    flex-direction: column;
+    gap: 1.75rem;
+    &__menus {
+      display: flex;
+      gap: 6.25rem;
+      flex-direction: row;
+    }
+    &__card {
+      width: 100%;
+      height: 15.6875rem;
+      padding: 1.5rem;
+    }
+    padding-bottom: 2rem;
+  }
+
+  .footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  .footer__content {
+    flex-direction: row;
+    color: var(--white, #fff);
+    margin-top: 2.7rem;
+  }
+  .footer__title {
+    margin-top: -2.2rem;
+    padding-right: 1rem;
+  }
+}
+

@@ -1,0 +1,43 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  /** variable **/
+  $colors: (
+    "primaire": #9356dc,
+    "secondaire": #ff79da,
+    "tertiaire": #99e2d0,
+    /** Default colors **/ "body_color": #fff,
+    "title_color": #eaeaea,
+    "main_color": #f6f6f6,
+    "loc_title": #353535,
+  );
+  
+  $body_font: Roboto, sans-serif;
+  $font_title: Shrikhand, sans-serif;
+  /** 
+   mixin
+  } **/
+  body {
+    font-family: map-get($colors, "body_font");
+    font {
+      size: 1.125rem;
+    }
+  }
+  img {
+    object-fit: cover;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    font-family: map-get($colors, "body_font");
+  }
+  @mixin navbar-shadow {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  

@@ -1,0 +1,20 @@
+
+/** Général 
+/*! pour le chier compliler */
+
+// fichier importer
+@import url("https://necolas.github.io/normalize.css/");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+// fichier interne
+@import "variables/variable";
+@import "modules/header";
+@import "modules/main";
+@import "modules/footer";
+//@import "modules/desktop";
+@import "restaurants/main";
+@import "restaurants/footer";
+@import "restaurants/header";
+//@import "restaurants/desktop";
+
+

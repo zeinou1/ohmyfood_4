@@ -1,0 +1,198 @@
+/*** Main contenair ***/
+.reservation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: map-get($colors, "main_color");
+  &__tittle {
+    margin-top: 2.44rem;
+    width: 17.1875rem;
+    height: 4.25rem;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  &__content {
+    width: 22.6875rem;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+
+  &__button {
+    width: 13.625rem;
+    height: 3.125rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5625rem;
+    background: var(
+      --button-gradient,
+      linear-gradient(175deg, #9356dc 0%, #ff79da 100%)
+    );
+
+    margin: 3rem 0 3rem 0;
+    &:hover {
+      background-color: chartreuse;
+      transition: 1s ease-in;
+    }
+   
+  }
+
+  &__button p {
+    padding: 0.81rem 0.81rem 1.17rem 1.17rem;
+    display: flex;
+    width: 14.28094rem;
+    color: map-get($colors, "body_color");
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+/**Fonctionnement **/
+.fonctionnement {
+  width: 100%;
+  margin-top: 3rem;
+  gap: 3rem;
+
+  &__title {
+    width: 17.1875rem;
+    height: 1.9375rem;
+    text-align: left;
+    font: 700 1.5rem $body_font;
+    margin-left: 1.25rem;
+  }
+  &__restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.25rem 1.7rem 2rem 1.7rem;
+
+    .choose__restaurant,
+    .compose__menu,
+    .de__restaurant {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: map-get($colors, "main_color");
+      border-radius: 1.25rem;
+      gap: 2rem;
+      width: 100%;
+      height: 4.52369rem;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      &:hover {
+        background-color: map-get($colors, "secondaire");
+        transition: 1s ease-in;
+      }
+    }
+  }
+  &__badge {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: map-get($colors, "primaire");
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -0.6rem;
+  }
+
+  &__restaurant span {
+    display: flex;
+    align-items: center;
+    color: map-get($colors, "body_color");
+  }
+  &__restaurant p {
+    font-weight: 500;
+    font-family: Roboto;
+    font-size: 1rem;
+  }
+}
+/** 
+restaurant
+**/
+
+.plats {
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: map-get($colors, "main_color");
+  padding-bottom: 3rem;
+  gap: 1rem;
+
+  &__title {
+    padding-top: 2rem;
+    margin-left: 1.25rem;
+    width: 17.1875rem;
+    height: 4.25rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.9375rem 0.9375rem 0 0;
+  }
+
+  &__menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 1.4rem;
+  }
+  &__card {
+    border-radius: 0.9375rem;
+    width: 100%;
+    height: 15.6875rem;
+    background-color: map-get($colors, "body_color");
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  &__subtile {
+    width: 16.6875rem;
+    height: 1.25rem;
+    padding-left: 1rem;
+    font: 700 1.125rem "Roboto", sans-serif;
+  }
+  &__content {
+    display: flex;
+  }
+  &__badge {
+    position: relative;
+    right: 3px;
+    left: 15.6rem;
+    top: -9.9rem;
+    z-index: 99;
+    color: var(--green-font, #008766);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 1.8125rem;
+    border-radius: 0.125rem;
+    background-color: map-get($colors, "tertiaire");
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  &__content {
+    gap: 8rem;
+    p {
+      font: 300 1.0625rem;
+      font-family: Roboto;
+      padding-left: 1rem;
+    }
+    .coeur {
+      position: relative;
+      top: -0.6rem;
+      right: 1.5rem;
+      left: 3rem;
+    }
+  }
+}
