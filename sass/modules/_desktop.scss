@@ -3,6 +3,7 @@ Media queries
 ***/
 
 @media (max-width: 1024px) {
+
 }
 
 /* Desktops */
@@ -34,7 +35,6 @@ Media queries
 
   .plats {
     padding: 0rem 11.25rem;
-
     gap: 1.75rem;
     &__menus {
       gap: 6.25rem;
@@ -44,12 +44,25 @@ Media queries
       height: 15.6875rem;
     }
     padding-bottom: 2rem;
+    
+    &__badge {
+        right: -22.5rem;
+      }
   }
   /***footer*/
   .footer {
-    flex-direction: column;
+    flex-direction: row-reverse;
+    padding: 1.875rem 1.5625rem;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-shrink: 0;
+   
   }
   .footer__content {
     flex-direction: row;
+    align-items: flex-end;
+  }
+  .footer__title{
+    padding-bottom: 2.2rem;
   }
 }
