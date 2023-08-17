@@ -42,12 +42,10 @@ Media queries
     }
     &__card {
       height: 15.6875rem;
+      
     }
     padding-bottom: 2rem;
-    
-    &__badge {
-      
-      }
+    position: relative;
   }
   /***footer*/
   .footer {
