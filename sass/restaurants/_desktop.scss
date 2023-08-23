@@ -1,0 +1,97 @@
+/*** 
+Media queries
+***/
+
+@media (min-width: 767px) and (max-width:1199px) {
+
+  body{
+    margin-bottom: 0;
+  }
+  .contenair{
+  
+
+   .contenair__menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    }
+    .contenair__card{
+     width: 46%;
+     
+    }
+    .grow-1,
+    .grow-2{
+      flex-grow: 1;
+    }
+    .grow-3 {
+    flex-grow: 2;
+    margin: 1rem 1rem;
+    }
+    .contenair__button{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    }
+    .child{
+      border-bottom: 2px solid #99E2D0;
+      width: 4%;}
+   
+  }
+  .footer {
+    flex-direction: row-reverse;
+    padding: 1.875rem 1.5625rem;
+    align-items: flex-end;
+    gap: 1rem;
+    
+  }
+  .footer__content {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+
+}
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 5440px) {
+  .logo_ohmyfood {
+    margin: 0 auto;
+  }
+  .contenair {
+    width: 100%;
+    &__lapalette {
+      margin-left: 12rem;
+      margin-right: 12rem;
+    }
+   
+    .contenair__article {
+      display: flex;
+      flex-direction: column;
+    }
+    .contenair__subtitle {
+        border-bottom: 1px solid brown;
+        width: 3%;
+    }
+  &__menu{
+    margin: 0 5rem;
+  }
+    
+   
+  }
+
+  .footer {
+    flex-direction: row-reverse;
+    padding: 1.875rem 1.5625rem;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+  .footer__content {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .footer__title {
+    padding-bottom: 2.2rem;
+  }
+} 

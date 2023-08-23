@@ -6,11 +6,35 @@
     box-sizing: border-box;
   }
   
-  /** variable **/
+ 
+  /** variable */
+  $size:3vh;
+  $times: 1000ms;
+  $num-bars: 3;
+  $anim-delay: $times / $num-bars;
+
+  /*
+  $flip:3;
+  $temps-c:1000ms;
+  $del-anima:$temps-c * $flip; */
+  
+a{
+  text-decoration: none;
+  color: black ;
+
+}
   $colors: (
     "primaire": #9356dc,
     "secondaire": #ff79da,
     "tertiaire": #99e2d0,
+    "green":#99E2D0,
+    "blue" : #4183C4 ,
+    "blue-2":#003A68,
+    "green-font":#008766,
+    "orange" : #FFA500,
+    "red" : red,
+    "white" : white,
+
     /** Default colors **/ "body_color": #fff,
     "title_color": #eaeaea,
     "main_color": #f6f6f6,
@@ -40,4 +64,3 @@
   @mixin navbar-shadow {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   }
-  

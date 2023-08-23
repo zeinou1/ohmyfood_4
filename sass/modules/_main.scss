@@ -1,3 +1,68 @@
+//loader
+
+@keyframes temps {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.page_chargement {
+  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  position: fixed;
+
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  animation: temps 1s 3s forwards;
+}
+
+.load {
+  width: $size * 13;
+  height: $size * 7.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  &__bar {
+    height: 100%;
+    width: $size;
+    animation: bars $times backwards cubic-bezier(0.99, 0.69, 0.62, 1.02);
+    animation-direction: alternate;
+
+    @for $i from 1 through $num-bars {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+    }
+  }
+}
+
+.load__bar--1 {
+  background-color: map-get($colors, "primaire");
+}
+.load__bar--2 {
+  background-color: map-get($colors, "secondaire");
+}
+.load__bar--3 {
+  background-color: map-get($colors, "tertiaire");
+}
+
 /*** Main contenair ***/
 .reservation {
   width: 100%;
@@ -25,6 +90,8 @@
   }
 
   &__button {
+    cursor: pointer;
+    margin: 3rem 0 3rem 0;
     width: 13.625rem;
     height: 3.125rem;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -33,15 +100,11 @@
       --button-gradient,
       linear-gradient(175deg, #9356dc 0%, #ff79da 100%)
     );
-
-    margin: 3rem 0 3rem 0;
     &:hover {
-      background-color: chartreuse;
-      transition: 1s ease-in;
+      filter: brightness(1.2);
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.78);
     }
-   
   }
-
   &__button p {
     padding: 0.81rem 0.81rem 1.17rem 1.17rem;
     display: flex;
@@ -52,9 +115,6 @@
   }
 }
 
-
-
-
 /**Fonctionnement **/
 .fonctionnement {
   width: 100%;
@@ -62,8 +122,6 @@
   gap: 3rem;
 
   &__title {
-    width: 17.1875rem;
-    height: 1.9375rem;
     text-align: left;
     font: 700 1.5rem $body_font;
     margin-left: 1.25rem;
@@ -89,6 +147,7 @@
       height: 4.52369rem;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
       &:hover {
+        cursor: pointer;
         background-color: map-get($colors, "secondaire");
         transition: 1s ease-in;
       }
@@ -121,10 +180,6 @@ restaurant
 **/
 
 .plats {
-  a {
-    text-decoration: none;
-    color: #000;
-  }
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -135,8 +190,7 @@ restaurant
   &__title {
     padding-top: 2rem;
     margin-left: 1.25rem;
-    width: 17.1875rem;
-    height: 4.25rem;
+    font: 700 1.5rem $body_font;
   }
 
   &__img {
@@ -152,6 +206,7 @@ restaurant
     align-items: center;
     gap: 1rem;
     margin: 0 1.4rem;
+    perspective: 1000px;
   }
   &__card {
     position: relative;
@@ -160,6 +215,10 @@ restaurant
     height: 15rem;
     background-color: map-get($colors, "body_color");
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    transition: 2s;
+    &:hover {
+      transform: translatez(30px);
+    }
   }
   &__badge {
     position: absolute;
@@ -174,21 +233,73 @@ restaurant
     border-radius: 0.125rem;
     background-color: map-get($colors, "tertiaire");
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-     &_title {
+    &_title {
       color: #108700;
     }
   }
-  &__content{
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-
+  &__content {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
   }
-  &__coeur{
+  &__coeur {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 1rem;
-    margin-top: -2rem;
-  
+    margin-top: -1.3rem;
+    // fa-heart
   }
+
+  &_coeur-color {
+    position: absolute;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 4s;
+  }
+  &_coeur-color:hover {
+    opacity: 1;
+    color: #ff79da;
+    background-clip: text; //
+    background: linear-gradient(194deg, #9356dc 0%, #ff79da 100%);
+    -webkit-background-clip: text; //
+  }
+}
+
+//Anime lettre
+@keyframes rotatelettre {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+h1 span{
+  display: inline-block;
+  padding: 3px;
+  animation: rotatelettre 3s backwards infinite ;
+}
+
+h1 {
+  perspective: 400px;
+  transform-origin: left center;
+}
+
+h1 span:nth-child(1) {
+  color: map-get($colors, "tertiaire");
+  font-size: 1em;
+  animation-delay: .1s;
+}
+
+h1 span:nth-child(2) {
+  text-transform: uppercase;
+  color: map-get($colors, "primaire");
+  font-size: 1em;
+  animation-delay: .1s;
+}
+h1 span:nth-child(3) {
+  text-transform: uppercase;
+  color: map-get($colors, "secondaire");
+  font-size: 1em;
+  animation-delay: .1s;
 }

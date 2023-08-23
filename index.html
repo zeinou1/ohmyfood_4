@@ -13,16 +13,26 @@
 </head>
 
 <body>
+    <div class="page_chargement">
+        <div class="load">
+            <div class="load__bar  load__bar--1"></div>
+            <div class="load__bar  load__bar--2"></div>
+            <div class="load__bar  load__bar--3"></div>
+    
+        </div>
+    </div>
+
     <header>
         <nav class="navbar">
             <div class="navbar__logo">
 
                 <img class="navbar__img" src="images/logo-ohmyfood.png" alt="logo oh my food" />
             </div>
-            <div class="navbar__localisation">
+            <form action="" method="post" class="navbar__localisation">
+           
                 <i class="fa-solid fa-location-dot"></i>
-                <p class="navbar__localisation-title">Paris, Belleville</p>
-            </div>
+                <input type="search" placeholder="Paris, Belleville" class="navbar__localisation-title">
+           </form>
         </nav>
     </header>
 
@@ -30,13 +40,16 @@
         <!-- Section reservation-->
         <section class="reservation">
 
-            <h1 class="reservation__tittle">Réservez le menu qui vous convient</h1>
-            <p class="reservation__content">
+            <h1 class="reservation__tittle">
+                <span>R</span>éservez le <span>m</span>enu qui vous <span>c</span>onvient</h1>
+           
+                <p class="reservation__content">
                 Découvrez des restaurants d’exception, sélectionnés par nos soins.
             </p>
             <button class="reservation__button">
-                <p> Explorer nos restaurants </p>
+            <a href="#"> <p>Explorer nos restaurants</p> </a>
             </button>
+
         </section>
 
         <!-- section Fonctionnement -->
@@ -81,10 +94,11 @@
             <div>
                 <h2 class="plats__title">Restaurants</h2>
             </div>
+            
             <div class="plats__menus">
-
-                <article class="plats__card">
-                    <a href="pages/restaurant_1.html">
+               
+                    <article class="plats__card">
+                        <a href="pages/restaurant_1.html">
                         <div>
                             <img class="plats__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                 alt="" />
@@ -97,13 +111,15 @@
 
                         </div>
                     </a>
-                    <!-- Coeur a remplir-->
-                    <div class="plats__coeur">
-                        <i class="fa-regular fa-heart coeur"> </i>
-                    </div>
-                </article>
-
-
+                        <!-- Coeur a remplir-->
+                        <div class="plats__coeur">
+                            <i class="fa-regular fa-heart plats_coeur"> </i>
+                            <i class="fa-solid fa-heart plats_coeur-color "> </i>
+                        </div>
+                   
+                    </article>
+             
+                    
                 <article class="plats__card">
                     <!-- Position relative sur le parent et les autres éléments enfants facile à gérer avec une position absolute et sa bouge pas plus -->
                     <a href="pages/restaurant_2.html">
@@ -121,7 +137,8 @@
 
                     <!-- Coeur a remplir-->
                     <div class="plats__coeur">
-                        <i class="fa-regular fa-heart coeur"> </i>
+                        <i class="fa-regular fa-heart plats_coeur"> </i>
+                        <i class="fa-solid fa-heart plats_coeur-color "> </i>
                     </div>
                 </article>
             </div>
@@ -130,20 +147,21 @@
                 <article class="plats__card">
                     <a href="pages/restaurant_3.html">
                         <div>
-                        <img class="plats__img"
-                            src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" />
+                            <img class="plats__img"
+                                src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" />
 
                             <div class="plats__content">
-                            <h3>À la française</h3>
-                       
-                   
-                            <p>Folie-Méricourt </p>
+                                <h3>À la française</h3>
+
+
+                                <p>Folie-Méricourt </p>
                             </div>
                         </div>
                     </a>
-                     <!-- Coeur a remplir-->
-                     <div class="plats__coeur">
-                        <i class="fa-regular fa-heart coeur"> </i>
+                    <!-- Coeur a remplir-->
+                    <div class="plats__coeur">
+                        <i class="fa-regular fa-heart plats_coeur"> </i>
+                        <i class="fa-solid fa-heart plats_coeur-color "> </i>
                     </div>
                 </article>
 
@@ -155,16 +173,17 @@
                         </div>
 
                         <div class="plats__content">
-                          
-                                <h3>délice des sens</h3>
-                                <p>Folie-Méricourt </p>
-                          
+
+                            <h3>délice des sens</h3>
+                            <p>Folie-Méricourt </p>
+
                         </div>
                     </a>
                     <!-- Coeur a remplir-->
 
                     <div class="plats__coeur">
-                        <i class="fa-regular fa-heart coeur"> </i>
+                        <i class="fa-regular fa-heart plats_coeur"> </i>
+                        <i class="fa-solid fa-heart plats_coeur-color "> </i>
                     </div>
 
                 </article>
@@ -184,17 +203,25 @@
 
             <div class="footer__infos--restaurant">
                 <i class="fa-solid fa-handshake-angle" style="color: #d9d3d3"></i>
-                <p class="footer__subtitle">Devenir partenaire</p>
+                <a href="#">
+                    <p class="footer__subtitle">Devenir partenaire</p>
+                </a>
 
             </div>
             <div>
-                <p>Mentions légales</p>
+                <a href="#">
+                    <p>Mentions légales</p>
+                </a>
             </div>
             <div>
-                <p>Contact</p>
+                <a href="mailto:monmail@gmail.com">
+                    <p>Contact</p>
+                </a>
             </div>
         </div>
     </footer>
+   
 </body>
+ <!--loader-->
 
 </html>
