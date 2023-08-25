@@ -1,5 +1,5 @@
 /**
-             Header (BEM)
+(BEM)
 **/
 
 .navbar {
@@ -30,7 +30,8 @@
     align-items: center;
     gap: 1.0625rem;
     background-color: map-get($colors, "title_color");
-  } //endlocalisation
+  } 
+
   &__localisation-title {
     font-family: $body_font;
     font-size: 0.9rem;
@@ -40,8 +41,8 @@
   
     background: var(--grey-2, #EAEAEA);
     &:focus{
+    width: 8rem;
     border: 1px solid black;
-    background-color: rgb(255, 187, 0);
     }
   }
-}//endnavbar
+}//End navbar

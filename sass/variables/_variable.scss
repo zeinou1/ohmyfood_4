@@ -1,66 +1,80 @@
+// code animation loader
+$size: 3vh;
+$times: 1000ms;
+$num-bars: 3;
+$anim-delay: $times / $num-bars;
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-  }
-  
- 
-  /** variable */
-  $size:3vh;
-  $times: 1000ms;
-  $num-bars: 3;
-  $anim-delay: $times / $num-bars;
 
-  /*
-  $flip:3;
-  $temps-c:1000ms;
-  $del-anima:$temps-c * $flip; */
-  
-a{
-  text-decoration: none;
-  color: black ;
+/** variables */
+//colors
 
+$colors: (
+  "primaire": #9356dc,
+  "secondaire": #ff79da,
+  "tertiaire": #99e2d0,
+  "green": #99e2d0,
+  "blue": #4183c4,
+  "blue-2": #003a68,
+  "green-font": #008766,
+  "orange": #ffa500,
+  "red": red,
+  "white": white,
+
+  /** Default colors **/ "body_color": #fff,
+  "title_color": #eaeaea,
+  "main_color": #f6f6f6,
+  "loc_title": #353535,
+);
+
+// font
+$body_font: Roboto, sans-serif;
+$font_title: Shrikhand, sans-serif;
+//mixin
+@mixin navbar-shadow {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-  $colors: (
-    "primaire": #9356dc,
-    "secondaire": #ff79da,
-    "tertiaire": #99e2d0,
-    "green":#99E2D0,
-    "blue" : #4183C4 ,
-    "blue-2":#003A68,
-    "green-font":#008766,
-    "orange" : #FFA500,
-    "red" : red,
-    "white" : white,
 
-    /** Default colors **/ "body_color": #fff,
-    "title_color": #eaeaea,
-    "main_color": #f6f6f6,
-    "loc_title": #353535,
-  );
-  
-  $body_font: Roboto, sans-serif;
-  $font_title: Shrikhand, sans-serif;
-  /** 
-   mixin
-  } **/
-  body {
-    font-family: map-get($colors, "body_font");
-    font {
-      size: 1.125rem;
-    }
-  }
-  img {
-    object-fit: cover;
-  }
-  h1,
-  h2,
-  h3,
-  p {
-    font-family: map-get($colors, "body_font");
-  }
-  @mixin navbar-shadow {
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  }
+
+//Icon font-awesome colors
+.fa-list-ul {
+  color: #7e7e7e;
+}
+.fa-store {
+  color: #9356DC;
+}
+.fa-mobile-screen-button {
+  color: #7e7e7e;
+};
+.fa-utensils{
+  color: #c2c2c2;
+} 
+.fa-handshake-angle {
+ color: #d9d3d3;
+};
+
+// Géneral
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: map-get($colors, "body_font");
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: map-get($colors, "body_font");
+}

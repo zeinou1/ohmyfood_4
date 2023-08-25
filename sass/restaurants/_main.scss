@@ -1,20 +1,20 @@
-/** main Contenair**/
+/** main Contenair restaurant**/
 
-//animation
 /*
-keyframes 
+keyframes  plats
 */
 @keyframes card-flip {
   from {
-    transform: translatex(2rem);
+    transform: translateX(2rem); 
     opacity: 0;
   }
 
   to {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
+
 .contenair {
   overflow: hidden;
   display: flex;
@@ -60,10 +60,13 @@ keyframes
     flex-direction: column;
     overflow: hidden;
   }
+
   &__content {
+
     //Animation card restaurant
     transform: scale(0);
     animation: card-flip 1000ms ease-in-out forwards;
+    // End Animation card restaurant
 
     margin-top: 1rem;
     position: relative;
@@ -101,14 +104,14 @@ keyframes
     justify-content: center;
     width: 3.6875rem;
     height: 4.3125rem;
-    color: green;
+    color: map-get($colors, "tertiaire" );
     border-radius: 0 23% 23% 0;
     position: absolute;
     top: 0;
     right: -22rem;
     transition-duration: 3s;
     transition-timing-function: linear;
-    background-color: rgb(48, 78, 4);
+    background-color: map-get($colors, "tertiaire" );
   }
 
   &__contenair__content,
@@ -117,6 +120,7 @@ keyframes
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    
   }
 
   .fa-check {
@@ -148,7 +152,7 @@ keyframes
   &__button {
     gap: 2.5rem;
     margin: 2rem;
-    margin: 1rem auto 1rem auto;
+    margin: 1rem auto 2rem auto;
     color: var(--white, #fff);
     text-align: center;
 

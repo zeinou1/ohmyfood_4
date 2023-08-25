@@ -22,3 +22,53 @@
     <img class="intro__image" src="https://openclassrooms-student-center.github.io/1603881-creez-votre-site-web-avec-html5-et-css3/images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens" />
  </section>
  //animation: name duration timing-function delay iteration-count direction fill-mode;
+
+ <!--//Anime lettre
+@keyframes rotatelettre {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+h1 span {
+  display: inline-block;
+  padding: 3px;
+  animation: rotatelettre 3s backwards infinite;
+  animation-direction: alternate;
+}
+
+h1 {
+  perspective: 400px;
+  transform-origin: left center;
+}
+
+h1 span:nth-child(1) {
+  color: map-get($colors, "tertiaire");
+  font-size: 1em;
+  animation-delay: 0.1s;
+}
+
+h1 span:nth-child(2) {
+  text-transform: uppercase;
+  color: map-get($colors, "primaire");
+  font-size: 1em;
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(3) {
+  text-transform: uppercase;
+  color: map-get($colors, "secondaire");
+  font-size: 1em;
+  animation-delay: 0.1s;
+}
+
+
+
+
+/*
+  $flip:3;
+  $temps-c:1000ms;
+  $del-anima:$temps-c * $flip; 
+*/
+-->

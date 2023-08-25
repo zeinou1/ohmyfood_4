@@ -1,5 +1,5 @@
 //loader
-
+// couleur du fond de loader
 @keyframes temps {
   0% {
     opacity: 1;
@@ -9,7 +9,16 @@
     visibility: hidden;
   }
 }
+.page_chargement {
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  animation: temps 1s 2s forwards;
+}
 
+// keyframes de bar loader
 @keyframes bars {
   0% {
     transform: scaleY(0.5);
@@ -17,15 +26,6 @@
   100% {
     transform: scaleY(1);
   }
-}
-
-.page_chargement {
-  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-  animation: temps 1s 3s forwards;
 }
 
 .load {
@@ -38,6 +38,7 @@
   align-items: center;
   display: flex;
   justify-content: space-evenly;
+
   &__bar {
     height: 100%;
     width: $size;
@@ -53,16 +54,17 @@
 }
 
 .load__bar--1 {
-  background-color: map-get($colors, "primaire");
-}
-.load__bar--2 {
-  background-color: map-get($colors, "secondaire");
-}
-.load__bar--3 {
   background-color: map-get($colors, "tertiaire");
 }
+.load__bar--2 {
+  background-color: map-get($colors, "primaire");
+}
+.load__bar--3 {
+  background-color: map-get($colors, "secondaire");
+} //End loader
 
 /*** Main contenair ***/
+//reservation
 .reservation {
   width: 100%;
   display: flex;
@@ -104,7 +106,7 @@
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.78);
     }
   }
-  &__button p {
+  &__button span {
     padding: 0.81rem 0.81rem 1.17rem 1.17rem;
     display: flex;
     width: 14.28094rem;
@@ -112,9 +114,9 @@
     font-size: 1rem;
     font-weight: 500;
   }
-}
+} //End reservation
 
-/**Fonctionnement **/
+/** Fonctionnement **/
 .fonctionnement {
   width: 100%;
   margin-top: 3rem;
@@ -145,11 +147,7 @@
       width: 100%;
       height: 4.52369rem;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-      &:hover {
-        cursor: pointer;
-        background-color: map-get($colors, "secondaire");
-        transition: 1s ease-in;
-      }
+    
     }
   }
   &__badge {
@@ -173,7 +171,12 @@
     font-family: Roboto;
     font-size: 1rem;
   }
-}
+
+  .compose__content {
+    font: 500 1rem roboto;
+  }
+}//End  fonctionnement
+
 /** 
 restaurant
 **/
@@ -194,7 +197,6 @@ restaurant
 
   &__img {
     width: 100%;
-    object-fit: cover;
     height: 11.4375rem;
     border-radius: 0.9375rem 0.9375rem 0 0;
   }
@@ -205,7 +207,7 @@ restaurant
     align-items: center;
     gap: 1rem;
     margin: 0 1.4rem;
-    perspective: 1000px;
+    //perspective: 1000px;
   }
   &__card {
     position: relative;
@@ -215,9 +217,9 @@ restaurant
     background-color: map-get($colors, "body_color");
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     transition: 2s;
-    &:hover {
+   /* &:hover {
       transform: translatez(30px);
-    }
+    } */
   }
   &__badge {
     position: absolute;
@@ -239,6 +241,12 @@ restaurant
   &__content {
     margin-top: 0.5rem;
     margin-left: 1rem;
+    p {
+      font: 700 1.125rem;
+    }
+    p {
+      font: 300 0.9625rem Roboto;
+    }
   }
   &__coeur {
     display: flex;
@@ -249,6 +257,7 @@ restaurant
     // fa-heart
   }
 
+  // animation coeur
   &_coeur-color {
     position: absolute;
     opacity: 0;
@@ -258,47 +267,8 @@ restaurant
   &_coeur-color:hover {
     opacity: 1;
     color: #ff79da;
-    background-clip: text; //
     background: linear-gradient(194deg, #9356dc 0%, #ff79da 100%);
     -webkit-background-clip: text; //
   }
-}
+}// End restaurant
 
-//Anime lettre
-@keyframes rotatelettre {
-  from {
-    transform: rotateY(180deg);
-  }
-  to {
-    transform: rotateY(0);
-  }
-}
-h1 span{
-  display: inline-block;
-  padding: 3px;
-  animation: rotatelettre 3s backwards infinite ;
-}
-
-h1 {
-  perspective: 400px;
-  transform-origin: left center;
-}
-
-h1 span:nth-child(1) {
-  color: map-get($colors, "tertiaire");
-  font-size: 1em;
-  animation-delay: .1s;
-}
-
-h1 span:nth-child(2) {
-  text-transform: uppercase;
-  color: map-get($colors, "primaire");
-  font-size: 1em;
-  animation-delay: .1s;
-}
-h1 span:nth-child(3) {
-  text-transform: uppercase;
-  color: map-get($colors, "secondaire");
-  font-size: 1em;
-  animation-delay: .1s;
-}
