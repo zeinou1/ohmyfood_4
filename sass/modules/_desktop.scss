@@ -2,6 +2,19 @@
 Media queries
 ***/
 /* Desktops */
+/* Desktops */
+@media (min-width: 767px) and (max-width:1199px) {
+  .plats{
+   &__menus{
+    display: flex;
+    flex-direction: row;
+   }
+  }
+  .footer{
+    flex-direction: column;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 3900px) {
   .reservation {
     &__button {

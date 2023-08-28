@@ -15,7 +15,7 @@
   height: 100%;
   width: 100%;
   z-index: 99;
-  animation: temps 1s 3s both linear;
+  animation: temps 1s 3s forwards linear;
 }
 
 // keyframes de bar loader

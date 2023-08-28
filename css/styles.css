@@ -25,6 +25,10 @@
   color: #d9d3d3;
 }
 
+body {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -104,7 +108,7 @@ img {
   height: 100%;
   width: 100%;
   z-index: 99;
-  animation: temps 1s 3s both linear;
+  animation: temps 1s 3s forwards linear;
 }
 
 @keyframes bars {
@@ -384,6 +388,16 @@ restaurant
 Media queries
 ***/
 /* Desktops */
+/* Desktops */
+@media (min-width: 767px) and (max-width: 1199px) {
+  .plats__menus {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer {
+    flex-direction: column;
+  }
+}
 @media (min-width: 1200px) and (max-width: 3900px) {
   .reservation__button {
     margin-top: 1rem;
