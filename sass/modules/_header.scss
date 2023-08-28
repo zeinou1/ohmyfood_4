@@ -36,12 +36,11 @@
     font-family: $body_font;
     font-size: 0.9rem;
     font-weight: 700;
-    width: 7rem;
+    width: 8rem;
     height: 2rem;
-  
     background: var(--grey-2, #EAEAEA);
     &:focus{
-    width: 8rem;
+ 
     border: 1px solid black;
     }
   }

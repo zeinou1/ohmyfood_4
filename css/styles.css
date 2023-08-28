@@ -81,12 +81,11 @@ img {
   font-family: Roboto, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  width: 7rem;
+  width: 8rem;
   height: 2rem;
   background: var(--grey-2, #EAEAEA);
 }
 .navbar__localisation-title:focus {
-  width: 8rem;
   border: 1px solid black;
 }
 
@@ -105,7 +104,7 @@ img {
   height: 100%;
   width: 100%;
   z-index: 99;
-  animation: temps 1s 2s forwards;
+  animation: temps 1s 3s both linear;
 }
 
 @keyframes bars {
@@ -130,7 +129,7 @@ img {
 .load__bar {
   height: 100%;
   width: 3vh;
-  animation: bars 1000ms backwards cubic-bezier(0.99, 0.69, 0.62, 1.02);
+  animation: bars 1000ms backwards ease-in-out infinite;
   animation-direction: alternate;
 }
 .load__bar--1 {

@@ -15,7 +15,7 @@
   height: 100%;
   width: 100%;
   z-index: 99;
-  animation: temps 1s 2s forwards;
+  animation: temps 1s 3s both linear;
 }
 
 // keyframes de bar loader
@@ -42,7 +42,7 @@
   &__bar {
     height: 100%;
     width: $size;
-    animation: bars $times backwards cubic-bezier(0.99, 0.69, 0.62, 1.02);
+    animation: bars $times  backwards ease-in-out infinite;
     animation-direction: alternate;
 
     @for $i from 1 through $num-bars {
